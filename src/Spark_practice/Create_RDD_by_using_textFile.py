@@ -8,6 +8,7 @@ file_path = 'E:/Spark_Assignment-1/Resource/user.csv'
 
 # Read the CSV file into a DataFrame
 df = spark.read.csv(file_path, header=False, inferSchema=False)
+
 #Here i use header=False,inferSchema=False then it will Generate the Default Colimn name  for each column
 #+-------+--------------------+--------------+---------+
 # |    _c0|                 _c1|           _c2|      _c3|
@@ -24,8 +25,8 @@ df = spark.read.csv(file_path, header=False, inferSchema=False)
 # |    109|    case@outlook.com|         tamil|   mumbai|
 # |    110|      fury@gmail.com|         hindi|   nagpur|
 # +-------+--------------------+--------------+---------+
-df2 = spark.read.csv(file_path, header=True, inferSchema=True)
 
+df2 = spark.read.csv(file_path, header=True, inferSchema=True)
 #Now we are taking header=true,and inferSchema=true then its takes our actuals data/column if we will mension true then it will not generate any defualt Column.
 
 # +-------+--------------------+--------------+---------+
@@ -42,7 +43,6 @@ df2 = spark.read.csv(file_path, header=True, inferSchema=True)
 # |    109|    case@outlook.com|         tamil|   mumbai|
 # |    110|      fury@gmail.com|         hindi|   nagpur|
 # +-------+--------------------+--------------+---------+
-
 
 # heare i am using show method to show the Data frame(df) and data frame(df2)
 df.show()
