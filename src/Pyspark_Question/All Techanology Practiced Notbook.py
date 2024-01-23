@@ -32,4 +32,3 @@ df2.show()
 df2.printSchema()
 
 
-
